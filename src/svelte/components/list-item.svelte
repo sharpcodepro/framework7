@@ -264,6 +264,7 @@
   }
   function onChange(event) {
     dispatch('change', [event]);
+    if (radio || checkbox) checked = !checked;
     if (typeof $$props.onChange === 'function') $$props.onChange(event);
   }
   onMount(() => {
